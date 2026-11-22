@@ -1,0 +1,504 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+}
+
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    background: #166534;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navbar-brand:hover {
+    color: #dcfce7;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #dcfce7;
+}
+
+.welcome-text {
+    color: white;
+    font-size: 15px;
+}
+
+
+/* Logout button */
+
+.logout-button {
+    background: white;
+    color: #166534;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 9px 16px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #dcfce7;
+}
+
+
+/* Main page */
+
+.app {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+
+/* Dashboard */
+
+.dashboard-container {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+.dashboard-header {
+    margin-bottom: 35px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #111827;
+}
+
+.dashboard-header p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #6b7280;
+}
+
+
+/* Dashboard cards */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+.dashboard-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    font-size: 23px;
+    color: #166534;
+}
+
+.dashboard-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* Main button */
+
+.primary-button {
+    background: #16a34a;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 11px 18px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #15803d;
+}
+
+
+/* Login and register page */
+
+.auth-container {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card h1 {
+    margin-top: 0;
+    color: #111827;
+}
+
+.auth-card h2 {
+    color: #166534;
+}
+
+.auth-card > p {
+    color: #6b7280;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+
+/* Form */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #374151;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: white;
+}
+
+input:focus,
+select:focus {
+    border-color: #16a34a;
+
+    box-shadow:
+        0 0 0 2px rgba(22, 163, 74, 0.15);
+}
+
+
+/* Error message */
+
+.auth-error {
+    background: #fee2e2;
+    color: #991b1b;
+
+    padding: 11px;
+
+    border-radius: 6px;
+
+    margin-top: 15px;
+}
+
+
+/* Success message */
+
+.auth-success {
+    background: #dcfce7;
+    color: #166534;
+
+    padding: 11px;
+
+    border-radius: 6px;
+
+    margin-top: 15px;
+}
+
+
+/* Login and register links */
+
+.auth-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-link a {
+    color: #16a34a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-link a:hover {
+    color: #15803d;
+    text-decoration: underline;
+}
+
+
+/* Normal card */
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #166534;
+}
+
+
+/* Secondary button */
+
+.secondary-button {
+    background: #6b7280;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 11px 18px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background: #4b5563;
+}
+
+
+/* Delete or cancel button */
+
+.delete-button,
+.cancel-button {
+    background: #dc2626;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 9px 15px;
+
+    cursor: pointer;
+}
+
+.delete-button:hover,
+.cancel-button:hover {
+    background: #b91c1c;
+}
+
+
+/* Table */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+/* Status */
+
+.status {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.confirmed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.cancelled {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* General success message */
+
+.success-message {
+    background: #dcfce7;
+    color: #166534;
+
+    border: 1px solid #86efac;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    margin-bottom: 20px;
+}
+
+
+/* General error message */
+
+.error-message {
+    background: #fee2e2;
+    color: #991b1b;
+
+    border: 1px solid #fca5a5;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Responsive layout */
+
+@media (max-width: 700px) {
+
+    .navbar-container {
+        flex-direction: column;
+
+        padding: 15px 0;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dashboard-header h1 {
+        font-size: 30px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-card {
+        padding: 25px;
+    }
+}
